@@ -1,0 +1,2 @@
+_colabs/_colab/hifi-gan-finetune/checkpoints/do_0002* filter=lfs diff=lfs merge=lfs -text
+_colabs/_colab/hifi-gan-finetune/checkpoints/g_0002* filter=lfs diff=lfs merge=lfs -text
