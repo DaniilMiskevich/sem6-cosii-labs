@@ -1,4 +1,4 @@
 #!/bin/bash
 
-docker run -p 8888:8888 -v ./_labs/:/home/jovyan/work/ --name jupyter-lab  quay.io/jupyter/scipy-notebook:latest && exit
+docker run -p 8888:8888 -v ./_labs/:/home/jovyan/work/ --name jupyter-lab  'quay.io/jupyter/scipy-notebook:python-3.12.11' && exit
 docker start -a jupyter-lab
