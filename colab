@@ -1,0 +1,10 @@
+#!/bin/bash
+
+docker run --gpus all -p 8888:8888 -v ./_colabs/:/home/jovyan/work/ -v ./_colabs/:/content/drive/MyDrive/ --name jupyter-colab  'quay.io/jupyter/pytorch-notebook:cuda12-python-3.11' \
+    jupyter notebook \
+        --NotebookApp.allow_origin='https://colab.research.google.com' \
+        --port=8888 \
+        --NotebookApp.port_retries=0 \
+        --NotebookApp.allow_credentials=True \
+    && exit
+docker start -a jupyter-colab
